@@ -1,0 +1,8 @@
+#client folders
+client/node_modules/
+
+#server folders
+server/.metadata/
+server/RemoteSystemsTempFiles/
+server/Servers/
+server/.recommenders/
