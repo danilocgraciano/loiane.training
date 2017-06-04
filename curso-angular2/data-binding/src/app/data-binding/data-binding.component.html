@@ -1,4 +1,4 @@
-<!--<section class="property-binding">
+<section class="property-binding">
   <article>
     <h3>
       Interpolation / Interpolação</h3>
@@ -44,34 +44,33 @@
     <button (click)="clickButton()" class="btn btn-primary">Me Clique!</button>
   </div>
   <br><br>
-  <input 
-    type="text" 
-    (keyup)="onKeyUp($event)" 
-    (keyup.enter)="salvarValor(input.value)" 
-    (blur)="salvarValor(input.value)"
-    #input />
+  <input type="text" (keyup)="onKeyUp($event)" (keyup.enter)="salvarValor(input.value)" (blur)="salvarValor(input.value)" #input
+  />
 
   <!--#input = $event.target-->
 
-<!--<input 
+  <!--<input 
     type="text" 
     (keyup)="onKeyUp($event)" 
     (keyup.enter)="salvarValor($event.target.value)" 
     (blur)="salvarValor($event.target.value)"/>-->
-<!--    
+
   <p>Valor atual: {{valorAtual}}</p>
   <p>Valor salvo: {{valorSalvo}}</p>
 
   <span (mouseover)="onMouseOverOut()" (mouseout)="onMouseOverOut()" [class.highlight]="isMouseOver">Passe o mouse sobre mim!</span>
-</section>-->
+</section>
 
-<!--<section class="two-way-binding">
+<section class="two-way-binding">
   <app-meu-form></app-meu-form>
-</section>-->
+</section>
 
 <section class="input-output-properties">
   <article>
     <h3>Input/Output Properties</h3>
     <app-curso [nome]="nomeCurso"></app-curso>
+
+    <contador [valor]="valorInicial" (mudouValor)="onMudouValor($event)"></contador>
+
   </article>
 </section>

@@ -14,6 +14,7 @@ export class DataBindingComponent implements OnInit {
   valorSalvo: string = '';
   isMouseOver: boolean = false;
   nomeCurso: string = 'Angular';
+  valorInicial: number = 13;
 
   getCurtirCurso(): boolean {
     return true;
@@ -38,6 +39,11 @@ export class DataBindingComponent implements OnInit {
   onMouseOverOut() {
     this.isMouseOver = !this.isMouseOver;
   }
+
+  onMudouValor(event) {
+    console.log(event.novoValor);
+  }
+
   constructor() { }
 
   ngOnInit() {
