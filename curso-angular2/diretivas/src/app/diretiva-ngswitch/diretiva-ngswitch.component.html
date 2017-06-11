@@ -1,0 +1,34 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">My Navbar</a>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#" [class.active]="aba == 'Home'" (click)="aba = 'Home'">Home</a>
+      <a class="nav-item nav-link" href="#" [class.active]="aba == 'Features'" (click)="aba = 'Features'">Features</a>
+      <a class="nav-item nav-link" href="#" [class.active]="aba == 'Pricing'" (click)="aba = 'Pricing'">Pricing</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container" [ngSwitch]="aba">
+  <p *ngSwitchCase="'Features'">Features page</p>
+  <p *ngSwitchCase="'Pricing'">Pricing page</p>
+  <p *ngSwitchDefault>Home page</p>
+</div>
+
+<h5>Removendo o * e usando template</h5>
+
+<div class="container" [ngSwitch]="aba">
+  <template [ngSwitchCase]="'Features'">
+    <p>Features page</p>
+  </template>
+  <template [ngSwitchCase]="'Pricing'">
+    <p>Pricing page</p>
+  </template>
+  <template [ngSwitchCase]="'Home'" ngSwitchDefault>
+    <p>Home page</p>
+  </template>
+</div>
