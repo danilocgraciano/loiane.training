@@ -6,7 +6,7 @@ import { CursosService } from './cursos.service';
   selector: 'app-cursos',
   templateUrl: './cursos.component.html',
   styleUrls: ['./cursos.component.css']
-  // ,providers: [CursosService]//escopo de instancia
+  , providers: [CursosService]//escopo de instancia
 })
 export class CursosComponent implements OnInit {
 
@@ -17,6 +17,11 @@ export class CursosComponent implements OnInit {
 
   ngOnInit() {
     this.cursos = this.cursosService.getCursos();
+    // Pode-se criar uma classe global da aplicação, para emitir mensagens
+    //Tipo Crud Created (freshdesk timeline)
+    CursosService.criouNovoCurso.subscribe(
+      novoCurso => this.cursos.push(novoCurso)
+    );
   }
 
 }
