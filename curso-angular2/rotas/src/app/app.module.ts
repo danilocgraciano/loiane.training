@@ -7,28 +7,23 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { CursosComponent } from './cursos/cursos.component';
-import { routing } from "app/app.routing";
-import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
-import { CursosService } from "app/cursos/cursos.service";
-import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-encontrado.component';
+import { AppRoutingModule } from "app/app.routing.module";
+import { CursosModule } from "app/cursos/cursos.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent,
-    CursosComponent,
-    CursoDetalheComponent,
-    CursoNaoEncontradoComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    CursosModule,
+    AppRoutingModule
   ],
-  providers: [CursosService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
