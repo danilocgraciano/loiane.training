@@ -16,6 +16,6 @@ const CURSOS_ROUTES: Routes = [
     imports: [RouterModule.forChild(CURSOS_ROUTES)],
     exports: [RouterModule]
 })
-export class AppRoutingModule {
+export class CursosRoutingModule {
 
 }

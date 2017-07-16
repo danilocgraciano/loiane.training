@@ -7,8 +7,9 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { AppRoutingModule } from "app/app.routing.module";
-import { CursosModule } from "app/cursos/cursos.module";
+import { AppRoutingModule } from "./app.routing.module";
+import { CursosModule } from "./cursos/cursos.module";
+import { AlunosModule } from "./alunos/alunos.module";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CursosModule } from "app/cursos/cursos.module";
     FormsModule,
     HttpModule,
     CursosModule,
+    AlunosModule,
     AppRoutingModule
   ],
   providers: [],
